@@ -4,7 +4,7 @@ import TextArea from '../component/TextArea';
 import { isPalindrome } from '../utils/palindrome'
 
 export default function Page1(props) {
-    const [palindrome, setPalindrome] = useState(true)
+    const [palindrome, setPalindrome] = useState(false)
     const [text, setText] = useState('')
 
     const handleInput = (str) => {
@@ -22,7 +22,7 @@ export default function Page1(props) {
                     {palindrome ? '🥳' : '🤔'}
                 </p>
                 <p className="page1__info">
-                    {palindrome ? 'You found a Palindrome!' : `it is not a palindrome`}
+                    {text === '' ? 'Type your palindrome' : palindrome ? 'Yey, you found a palindrome' : `It is not a palindrome`}
                 </p>
             </div>
         </>

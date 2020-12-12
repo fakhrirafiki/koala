@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -26,27 +26,25 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function InputAdornments() {
+export default function InputAdornments(props) {
     const classes = useStyles();
-    const [values, setValues] = React.useState({
-        amount: '',
-        password: '',
-        weight: '',
-        weightRange: '',
-        showPassword: false,
-    });
+    const [value, setValue] = useState(0);
+    const [error, setError] = useState('')
 
-    const handleChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
+    const handleChange = (event) => {
+        setValue(0);
+        if (event.target.value <= 99) return setError('minimal amount is Rp99')
+        if (event.target.value >= 1000000000) return setError('maximal amount is Rp1.000.000.000')
+        setError('')
+        setValue(event.target.value);
     };
 
-    // const handleClickShowPassword = () => {
-    //     setValues({ ...values, showPassword: !values.showPassword });
-    // };
+    useEffect(() => {
+        props.handleInput(value)
+        setError('')
+        // console.log(value)
+    }, [value])
 
-    // const handleMouseDownPassword = (event) => {
-    //     event.preventDefault();
-    // };
 
     return (
         <div className={classes.root}>
@@ -54,11 +52,13 @@ export default function InputAdornments() {
                 <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
                 <OutlinedInput
                     id="outlined-adornment-amount"
-                    value={values.amount}
-                    onChange={handleChange('amount')}
+                    onChange={handleChange}
                     startAdornment={<InputAdornment position="start">Rp</InputAdornment>}
                     labelWidth={60}
+                    type="number"
+                    error={error ? true : false}
                 />
+                <p>{error ? error : ''}</p>
             </FormControl>
         </div>
     );

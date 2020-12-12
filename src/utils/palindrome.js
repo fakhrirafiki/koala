@@ -1,4 +1,5 @@
 export function isPalindrome(str) {
+
     function isNumOrAlphabet(charNumber) {
         if (!Number.isInteger(charNumber)) return false
         if (charNumber < 47) return false
@@ -20,8 +21,16 @@ export function isPalindrome(str) {
         }
         return charCodeArr
     }
+    if (Number.isInteger(str)) {
+        str = str.toString()
+    }
+
+    str = str.toLowerCase()
+    console.log(str)
 
     let charCodeArray = strToCharCodeArr(str)
+
+    console.log(charCodeArray)
 
     let len = charCodeArray.length;
 
@@ -29,13 +38,14 @@ export function isPalindrome(str) {
     // console.log(mid)
     for (let i = 0; i < mid; i++) {
         if (charCodeArray[i] !== charCodeArray[len - 1 - i]) {
-            // console.log('nope')
+            console.log('nope')
             return false;
         }
     }
-    // console.log('yesh')
+    console.log('yesh')
     return true;
 }
+
 
 
 

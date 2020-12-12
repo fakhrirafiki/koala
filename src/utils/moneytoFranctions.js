@@ -1,5 +1,5 @@
-function moneytoFranctions(uangMasuk) {
-    const money = [100000, 50000, 20000, 10000, 5000, 1000, 500, 200, 100]
+export function moneytoFranctions(uangMasuk) {
+    const money = [100000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100]
     const fractions = []
     let curentMoney = uangMasuk
 
@@ -9,14 +9,12 @@ function moneytoFranctions(uangMasuk) {
         const sisa = curentMoney % pecahan
 
         curentMoney = sisa
-        console.log(pecahan, curentMoney)
+        // console.log(pecahan, curentMoney)
     });
 
     fractions.push(curentMoney)
 
-    console.log(fractions)
+    // console.log(fractions)
 
     return fractions
 }
-
-moneytoFranctions(1204)
