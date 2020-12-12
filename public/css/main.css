@@ -58,26 +58,16 @@ h1 span {
   bottom: 0;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    position: static;
-    background-position: center0;
-  }
-}
-
 .buttonRouting {
-  margin-top: 50px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 50px;
-  z-index: 10;
 }
 
 .page2 {

@@ -1,17 +1,30 @@
-import React from 'react'
+// import React, { useState } from "react"
+import React, { useState } from "react"
 import TextArea from '../component/TextArea';
-import ButtonRouting from '../component/ButtonRouting'
+import { isPalindrome } from '../utils/palindrome'
 
-export default function page1() {
+export default function Page1(props) {
+    const [palindrome, setPalindrome] = useState(true)
+    const [text, setText] = useState('')
+
+    const handleInput = (str) => {
+        setText(str)
+        const result = (isPalindrome(str))
+        setPalindrome(result)
+    }
+
     return (
         <>
             <div className="page1">
                 <h1>PALINDROME <span>TEXT</span></h1>
-                <TextArea />
-                <p className="page1__emoji">🥳 🥳 🤔</p>
-                <p className="page1__info">You found a Palindrome!</p>
+                <TextArea handleInput={handleInput} />
+                <p className="page1__emoji" onClick={() => setPalindrome(!palindrome)}>
+                    {palindrome ? '🥳' : '🤔'}
+                </p>
+                <p className="page1__info">
+                    {palindrome ? 'You found a Palindrome!' : `it is not a palindrome`}
+                </p>
             </div>
-            <ButtonRouting />
         </>
     )
 }

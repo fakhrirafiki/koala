@@ -10,9 +10,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexWrap: 'wrap',
         width: '50%',
-        minWidth: '480px',
+        height: '100px',
         maxWidth: '600px',
         margin: 'auto',
+        transform: 'scale(1.4)'
     },
     margin: {
         margin: theme.spacing(1),

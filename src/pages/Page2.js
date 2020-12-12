@@ -3,7 +3,7 @@ import InputMoney from '../component/InputMoney';
 import ButtonRouting from '../component/ButtonRouting'
 import MoneyItem from '../component/MoneyItem'
 
-export default function page2() {
+export default function Page2() {
     return (
         <>
             <div className="page2">
@@ -23,7 +23,6 @@ export default function page2() {
                 <MoneyItem name="coin">100</MoneyItem>
                 <MoneyItem name="rest">100</MoneyItem>
             </div>
-            <ButtonRouting />
         </>
     )
 }
