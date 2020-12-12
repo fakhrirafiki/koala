@@ -12,7 +12,6 @@ export default function page1() {
                 <p className="page1__info">You found a Palindrome!</p>
             </div>
             <ButtonRouting />
-            <div className="footer"></div>
         </>
     )
 }

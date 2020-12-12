@@ -20,8 +20,8 @@
 }
 
 textarea {
-    min-width: 200px;
-    width: 100%;
+    max-width: 500px;
+    width: 90%;
     padding: 30px;
     margin: 10px;
     color: var(--color-text-p);
@@ -40,11 +40,9 @@ h1 {
 
 .footer {
     background: url('../image/footer.42d12654.svg');
-    background-position: 50% -0px;;
+    background-position: 50% 0px;;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    // background-color: red;
 
     height: 300px;
     width: 100%;
@@ -52,6 +50,13 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
+
+    @media (max-width: 768px) {
+        position: static;
+        background-position: center0;
+
+  
+    }
 }
 
 .buttonRouting {
@@ -71,12 +76,17 @@ h1 {
 .page2{
     // background-color: black;
     width: 100%;
+
+    h1 {
+        margin-top: 50px ;
+    }
+    
 }
 
 .moneyItem {
     // background-color: blue;
-    width: 50%;
     min-width: 480px;
+    max-width: 900px;
     margin: auto;
     z-index: 1000;
     position: relative;

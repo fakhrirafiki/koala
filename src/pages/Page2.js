@@ -24,7 +24,6 @@ export default function page2() {
                 <MoneyItem name="rest">100</MoneyItem>
             </div>
             <ButtonRouting />
-            <div className="footer"></div>
         </>
     )
 }
