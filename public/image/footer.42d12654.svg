@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs>
+        <clipPath id="prefix__clip-path">
+            <path id="prefix__Rectangle_359" d="M0 0H1920V1080H0z" data-name="Rectangle 359"/>
+        </clipPath>
+    </defs>
+    <g id="prefix__Koala_-_Home_-_Footer" clip-path="url(#prefix__clip-path)" data-name="Koala - Home - Footer">
+        <path id="prefix__Path_394" fill="#3294a3" d="M.278 841.259c-16.59-656.118 711.142-617.34 1365.1-439.165S2428.09 0 2428.09 0l756.9 656.051-944.915 804.931L780.9 1705.147z" data-name="Path 394" transform="rotate(10.02 1112.218 -869.947)"/>
+        <path id="prefix__Path_395" fill="rgba(50,148,163,0.65)" d="M.318 985.6c-18.927 748.557 811.335 704.316 1557.424 501.038s1212.439 458.745 1212.439 458.745l863.537-748.483-1078.043-918.334L890.915 0z" data-name="Path 395" transform="scale(-1) rotate(-10.02 -10159.013 15398.824)"/>
+    </g>
+</svg>

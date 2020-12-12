@@ -1,3 +1,175 @@
+.page1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.page1__emoji {
+  font-size: 500%;
+  margin: 20px;
+}
+
+.page1__info {
+  font-size: 400%;
+  color: var(--color-text-p);
+}
+
+textarea {
+  min-width: 200px;
+  width: 100%;
+  padding: 30px;
+  margin: 10px;
+  color: var(--color-text-p);
+}
+
+h1 {
+  color: var(--color-blue-1);
+  margin-bottom: 5vh;
+  font-size: 5vh;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 span {
+  font-weight: 500 !important;
+}
+
+.footer {
+  background: url("../image/footer.42d12654.svg");
+  background-position: 50% -0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.buttonRouting {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  z-index: 10;
+}
+
+.page2 {
+  width: 100%;
+}
+
+.moneyItem {
+  width: 50%;
+  min-width: 480px;
+  margin: auto;
+  z-index: 1000;
+  position: relative;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.moneyItem__container {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.moneyItem__paper {
+  background-color: green;
+  min-width: 120px;
+  width: 90%;
+  height: 70px;
+  border: 5px solid greenyellow;
+  color: #fff;
+  font-size: 150%;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.moneyItem__coin {
+  background-color: green;
+  width: 70px;
+  height: 70px;
+  border: 5px solid greenyellow;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 150%;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.moneyItem__rest {
+  font-size: 250%;
+}
+
+.moneyItem__countInfo {
+  padding-top: 10px;
+  font-size: 120%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +198,17 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
   font-weight: 400;
   line-height: 1.6;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body::-webkit-scrollbar {
@@ -41,4 +221,12 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--color-blue-1);
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
 }
