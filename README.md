@@ -23,7 +23,3 @@ Project ini adalah bagian dari rangkaian proses penerimaan recruitment dari Koal
                 iii. 42.500,000 => 20.000(x2), 2.000(x1), 500(500)
                 iv. 224.00 => 200(x1) sisa 24
             f. Nilai lebih jika disertai design yang responsive & CSS Framework(Bootstrap 4/material design)
-
-
-SCRIP TO RUN
-
